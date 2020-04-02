@@ -1,5 +1,14 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  var result = [];
+	for (const element of collectionA) {
+		if (objectB["value"].includes(element["key"])) {
+			element["count"]--;
+			result.push(element);
+		}
+		else 
+			result.push(element);
+	}
+  return result;
 }
